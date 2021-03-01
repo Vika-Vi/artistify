@@ -114,9 +114,9 @@ Styles.deleteOne({name: val}).then(()=> console.log("succesfully deleted one"));
 
 // ----------------- functions --------------------------- 
 
-createArtist(artist);
-// createLabels(label)
-// createStyles(style)
+createArtist(artist)
+createLabels(label)
+createStyles(style)
 
 // deleteAllArtists()
 // deleteAllLabels()
