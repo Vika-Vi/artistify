@@ -1,1 +1,17 @@
 <h1>Artist Create</h1>
+
+<form action="/artists/create" method="POST" class="form">
+<label for="name">Name</label>
+<input class="input"  type="text" id ="name" name="name" placeholder="Artist Name"> 
+ 
+<label for="description">Description</label>
+<input class="input"  type="text" name="description" id="description" placeholder="Enter your description" >
+
+<label for="band">Is it a Band</label>
+<input class="input" type="checkbox" id="band" name="isBand">
+
+<label for="picture">Picture</label>
+<input class="input" type="file" name="picture" id="picture">
+<button id="btn" class="button"> Create </button>
+
+</form>
