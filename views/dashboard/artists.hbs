@@ -1,1 +1,22 @@
-console.log("Hello");
+<h1>All Artists</h1>
+<a href="/dashboard/create"></a>
+<table>
+  <tr>
+    <td>Picture</td>
+    <td>Name</td>
+    <td>Description</td>
+    <td>Band</td>
+    <td>Update</td>
+    <td>Delete</td>
+  </tr>
+  {{#each artists}}
+  <tr>
+    <td>{{this.picture}}</td>
+     <td>{{this.name}}</td>
+     <td>{{this.description}}</td>
+     <td>{{this.isBand}}</td>
+     <td><a href="{{this._id}}">Update</a></td>
+     <td><a href="{{this._id}}">Delete</a></td>
+  </tr>
+  {{/each}}
+</table>
