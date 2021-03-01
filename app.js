@@ -28,7 +28,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // connect routers
 const indexRouter = require("./routes/index");
-const artistRouter = require("./routes/artist")
+const artistRouter = require("./routes/artist");
 // require artist router
 // require label router here
 // require style router here

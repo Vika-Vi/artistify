@@ -24,7 +24,7 @@ const artist = [
     isBand: true,
     description: "a major electro artist"
 },
-]
+];
 
 const label = [
 {
@@ -35,7 +35,7 @@ const label = [
     streetNumber: 20,
     zipcode: "20AFoo",
 }
-]
+];
 
 const style = [
     {
@@ -44,7 +44,7 @@ const style = [
         wikiURL: "https://en.wikipedia.org/wiki/Chinoiserie"
 
     }
-    ]
+    ];
 
 // ------------- Artists ---------------------------
 
@@ -52,17 +52,19 @@ const style = [
 
 function createArtist(artists) {
 Artists.insertMany(artists)
-.then((artists) => {artists.forEach(artist => console.log(artist.name))})
-.catch(error => {console.error('Error connecting to the database', error);})
+.then((artists) => {artists.forEach(artist => console.log(artist.name));
+})
+.catch(error => {console.error('Error connecting to the database', error);
+});
 }
 
 
 function deleteAllArtists() {
-Artists.deleteMany().then(()=> console.log("succesfully deleted"))
+Artists.deleteMany().then(()=> console.log("succesfully deleted"));
 }
 
 function deleteOneArtists(name, val) {
-Artists.deleteOne({name: val}).then(()=> console.log("succesfully deleted one")) 
+Artists.deleteOne({name: val}).then(()=> console.log("succesfully deleted one")) ;
 }
 
 
@@ -72,16 +74,18 @@ Artists.deleteOne({name: val}).then(()=> console.log("succesfully deleted one"))
 
 function createLabels(labels) {
     Labels.insertMany(labels)
-    .then((labels) => {labels.forEach(label => console.log(label.name))})
-    .catch(error => {console.error('Error connecting to the database', error);})
+    .then((labels) => {labels.forEach(label => console.log(label.name));
+    })
+    .catch(error => {console.error('Error connecting to the database', error);
+});
     }
  
 function deleteAllLabels() {
-Labels.deleteMany().then(()=> console.log("succesfully deleted"))
+Labels.deleteMany().then(()=> console.log("succesfully deleted"));
 }
 
 function deleteOneLabels(name, val) {
-Labels.deleteOne({name: val}).then(()=> console.log("succesfully deleted one")) 
+Labels.deleteOne({name: val}).then(()=> console.log("succesfully deleted one")) ;
 }
         
 
@@ -91,16 +95,18 @@ Labels.deleteOne({name: val}).then(()=> console.log("succesfully deleted one"))
 
 function createStyles(styles) {
 Styles.insertMany(styles)
-.then((styles) => {styles.forEach(style => console.log(style.name))})
-.catch(error => {console.error('Error connecting to the database', error);})
+.then((styles) => {styles.forEach(style => console.log(style.name));
+})
+.catch(error => {console.error('Error connecting to the database', error);
+});
 }
 
 function deleteAllStyles() {
-Styles.deleteMany().then(()=> console.log("succesfully deleted"))
+Styles.deleteMany().then(()=> console.log("succesfully deleted"));
 }
 
 function deleteOneStyles(name, val) {
-Styles.deleteOne({name: val}).then(()=> console.log("succesfully deleted one")) 
+Styles.deleteOne({name: val}).then(()=> console.log("succesfully deleted one"));
 }
         
 
@@ -108,7 +114,7 @@ Styles.deleteOne({name: val}).then(()=> console.log("succesfully deleted one"))
 
 // ----------------- functions --------------------------- 
 
-createArtist(artist)
+createArtist(artist);
 // createLabels(label)
 // createStyles(style)
 
