@@ -146,3 +146,7 @@ hr {
   margin-right: 10px;
   display: inline-block;
 }
+
+tr td{
+  border : 1px solid black;
+}
