@@ -1,6 +1,8 @@
+
 require("dotenv").config();
 require("./config/mongo");
 require("./helpers/hbs"); // custom functions adding features to hbs templates
+
 
 const createError = require("http-errors");
 const express = require("express");
@@ -26,13 +28,14 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // connect routers
 const indexRouter = require("./routes/index");
+const artistRouter = require("./routes/artist")
 // require artist router
 // require label router here
 // require style router here
 
 // use routers
 app.use("/", indexRouter); // use routers
-// use artist router here
+app.use("/dashboard/artists", artistRouter); // use artist router here
 // use label router here
 // use style router here
 
