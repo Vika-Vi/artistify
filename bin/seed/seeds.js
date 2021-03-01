@@ -10,10 +10,20 @@ const Styles = require('../../model/Style.js');
 
 const artist = [
 {
-    name: "foo2",
+    name: "sonic youth",
     isBand: true,
-    description: "this is also a band"
-}
+    description: "a noisy band"
+},
+{
+    name: "wu tang clan",
+    isBand: true,
+    description: "a legendary hip hop crew"
+},
+{
+    name: "aphex twin",
+    isBand: true,
+    description: "a major electro artist"
+},
 ]
 
 const label = [
@@ -98,7 +108,7 @@ Styles.deleteOne({name: val}).then(()=> console.log("succesfully deleted one"))
 
 // ----------------- functions --------------------------- 
 
-// createStyles(artist)
+// createArtist(artist)
 // createLabels(label)
 // createStyles(style)
 
